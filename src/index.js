@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// Importing the Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { SearchProvider } from './contexts/SearchContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SearchProvider>
+      <App />
+    </SearchProvider>
+   
   </React.StrictMode>,
   document.getElementById('root')
 );
